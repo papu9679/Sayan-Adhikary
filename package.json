@@ -1,0 +1,16 @@
+﻿{
+  "name": "sayan-adhikary-portfolio",
+  "version": "1.0.0",
+  "description": "Full-stack portfolio website built with React, Node.js, Express, and MongoDB",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "node server/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

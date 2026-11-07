@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --daylight-sun: #f59e0b;
+    --daylight-sky: #0284c7;
+    --daylight-bg: #f8fafc;
+    --daylight-card: #ffffff;
+    --daylight-border: #e2e8f0;
+    --daylight-text: #0f172a;
+    --daylight-text-secondary: #334155;
+    --daylight-text-muted: #64748b;
+  }
+
+  .dark {
+    --night-bg: #080a14;
+    --night-card: #111528;
+    --night-border: rgba(99, 102, 241, 0.2);
+    --night-text: #ffffff;
+    --night-text-secondary: #e2e8f0;
+    --night-text-muted: #94a3b8;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    background-color: #080a14;
+    color: #ffffff;
+  }
+
+  html.daylight {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* GPU-accelerated Keyframes for Zero Lag */
+@keyframes pulseSubtle {
+
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+
+/* Humanized Text Gradients (Clean, cohesive, high-contrast) */
+.braided-text {
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 65%, #3b82f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.dark .braided-text {
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 55%, #bfdbfe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.braided-text-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.dark .braided-text-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.braided-text-amber {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.dark .braided-text-amber {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Calm, Humanized Ambient Backgrounds */
+.daylight-ambient {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(219, 234, 254, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(224, 231, 255, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 50% 65%, rgba(241, 245, 249, 0.6) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+.night-ambient {
+  background-color: #0b0f19;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 70%, rgba(30, 41, 59, 0.2) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  transform-origin: 0% 50%;
+  will-change: transform;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
