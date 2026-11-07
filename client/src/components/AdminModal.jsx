@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { getApiUrl } from '../config/api';
 import { 
   ShieldCheck, 
   X, 
@@ -40,7 +41,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
     setVerifying(true);
     setLoginError('');
     try {
-      const res = await fetch('/api/admin/stats', {
+      const res = await fetch(getApiUrl('/api/admin/stats'), {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       if (res.ok) {
@@ -63,7 +64,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
     setVerifying(true);
     setLoginError('');
     try {
-      const res = await fetch('/api/admin/login', {
+      const res = await fetch(getApiUrl('/api/admin/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password }),
@@ -96,7 +97,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
     setLoading(true);
     setActionMessage('');
     try {
-      const statsRes = await fetch('/api/admin/stats', {
+      const statsRes = await fetch(getApiUrl('/api/admin/stats'), {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       const statsData = await statsRes.json();
@@ -105,7 +106,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
       }
 
       const statusParam = tab === 'all' ? 'all' : tab;
-      const listRes = await fetch(`/api/admin/feedback?status=${statusParam}`, {
+      const listRes = await fetch(getApiUrl(`/api/admin/feedback?status=${statusParam}`), {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       const listData = await listRes.json();
@@ -122,7 +123,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
   const updateStatus = async (id, newStatus) => {
     setActionMessage('');
     try {
-      const res = await fetch(`/api/admin/feedback/${id}`, {
+      const res = await fetch(getApiUrl(`/api/admin/feedback/${id}`), {
         method: 'PATCH',
         headers: { 
           'Content-Type': 'application/json',
@@ -144,7 +145,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
   const deleteItem = async (id) => {
     if (!window.confirm('Are you sure you want to delete this feedback permanently?')) return;
     try {
-      const res = await fetch(`/api/admin/feedback/${id}`, {
+      const res = await fetch(getApiUrl(`/api/admin/feedback/${id}`), {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${authToken}` },
       });

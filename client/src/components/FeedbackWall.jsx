@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { getApiUrl } from '../config/api';
 import { 
   MessageSquare, 
   Send, 
@@ -45,7 +46,7 @@ export default function FeedbackWall({ onOpenAdmin }) {
     setLoading(true);
     setFetchError('');
     try {
-      const res = await fetch('/api/feedback');
+      const res = await fetch(getApiUrl('/api/feedback'));
       const data = await res.json();
       if (data.success) {
         setFeedbacks(data.data || []);
@@ -77,7 +78,7 @@ export default function FeedbackWall({ onOpenAdmin }) {
 
     setSubmitting(true);
     try {
-      const res = await fetch('/api/feedback', {
+      const res = await fetch(getApiUrl('/api/feedback'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

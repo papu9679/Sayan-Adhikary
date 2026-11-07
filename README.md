@@ -95,9 +95,34 @@ A personal developer portfolio built with React, Tailwind CSS, Node.js, Express,
 | `POST` | `/api/feedback` | Submit new feedback (saved as `pending`) | No |
 | `POST` | `/api/feedback/:id/react` | Increment helpful reaction count | No |
 | `POST` | `/api/admin/login` | Verify admin password | No |
-| `GET` | `/api/admin/feedback` | Retrieve all feedback (pending, approved, rejected) | Yes (`x-admin-password`) |
-| `PATCH` | `/api/admin/feedback/:id` | Update status (`published` / `rejected`) | Yes (`x-admin-password`) |
-| `DELETE` | `/api/admin/feedback/:id` | Permanently delete feedback | Yes (`x-admin-password`) |
+| `GET` | `/api/admin/feedback` | Retrieve all feedback (pending, approved, rejected) | Yes (`Authorization: Bearer <token>`) |
+| `PATCH` | `/api/admin/feedback/:id` | Update status (`published` / `rejected`) | Yes (`Authorization: Bearer <token>`) |
+| `DELETE` | `/api/admin/feedback/:id` | Permanently delete feedback | Yes (`Authorization: Bearer <token>`) |
+
+---
+
+## Deployment
+
+### 1. Backend (e.g., Render, Railway, Heroku)
+- Root directory: `server`
+- Build command: `npm install`
+- Start command: `node server.js`
+- Environment variables:
+  ```env
+  PORT=5000
+  MONGODB_URI=your_mongodb_atlas_connection_string
+  ADMIN_PASSWORD=your_secure_password
+  ```
+
+### 2. Frontend (e.g., Vercel, Netlify, Cloudflare Pages)
+- Root directory: `client`
+- Build command: `npm run build`
+- Output directory: `dist`
+- Environment variables:
+  ```env
+  VITE_API_URL=https://your-backend-api.onrender.com
+  ```
+  Note: When `VITE_API_URL` is set, all frontend requests automatically target your live backend API. When running locally with `npm run dev`, leaving it blank routes requests through Vite's local dev proxy (`http://localhost:5000`).
 
 ---
 
