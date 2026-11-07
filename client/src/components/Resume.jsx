@@ -8,7 +8,7 @@ import {
 	Calendar,
 	MapPin,
 	CheckCircle2,
-	Sparkles,
+	ExternalLink,
 } from 'lucide-react';
 
 export default function Resume() {
@@ -16,15 +16,9 @@ export default function Resume() {
 	const { resume, personal, education } = portfolioData;
 	const [downloadSuccess, setDownloadSuccess] = useState(false);
 
-	const handleDownload = () => {
-		const link = document.createElement('a');
-		link.href =
-			'https://drive.google.com/file/d/13ZEpaqeLeo0m6n77hG4vNX85pcSeChy9/view?usp=sharing';
-		link.download = 'Sayan_Adhikary_Resume.pdf';
-
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
+	const handleDownloadClick = () => {
+		setDownloadSuccess(true);
+		setTimeout(() => setDownloadSuccess(false), 4000);
 	};
 
 	return (
@@ -71,14 +65,19 @@ export default function Resume() {
 							</p>
 						</div>
 
-						<div className="flex items-center gap-3">
-							<button
-								onClick={handleDownload}
+						<div className="flex flex-wrap items-center gap-3">
+							<a
+								href={
+									resume.directDownloadUrl ||
+									'https://drive.google.com/uc?export=download&id=13ZEpaqeLeo0m6n77hG4vNX85pcSeChy9'
+								}
+								download={resume.downloadFileName || 'Sayan_Adhikary.pdf'}
+								onClick={handleDownloadClick}
 								className="flex items-center gap-2 px-6 py-3.5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/20 transition-transform hover:scale-[1.02] active:scale-[0.98]"
 							>
 								<Download className="w-4 h-4" />
 								<span>Download Resume</span>
-							</button>
+							</a>
 						</div>
 					</div>
 

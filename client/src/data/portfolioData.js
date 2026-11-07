@@ -292,8 +292,11 @@ export const portfolioData = {
 	],
 
 	resume: {
-		downloadFileName:
-			'Sayan_Adhikary.pdf',
+		downloadFileName: 'Sayan_Adhikary.pdf',
+		driveViewUrl:
+			'https://drive.google.com/file/d/13ZEpaqeLeo0m6n77hG4vNX85pcSeChy9/view?usp=sharing',
+		directDownloadUrl:
+			'https://drive.google.com/uc?export=download&id=13ZEpaqeLeo0m6n77hG4vNX85pcSeChy9',
 		summary:
 			'Full-Stack Software Engineer with experience building web applications in React, Node.js, and MongoDB. Practical background in REST API development, authentication, and cloud deployment.',
 		experience: [
