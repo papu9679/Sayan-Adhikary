@@ -194,8 +194,8 @@ export const portfolioData = {
 				'MongoDB',
 				'Node.js',
 			],
-			githubUrl: 'https://github.com/papu9679',
-			liveUrl: '#feedback',
+			githubUrl: 'https://github.com/papu9679/Sayan-Adhikary',
+			liveUrl: '#',
 			featured: true,
 			highlights: [
 				'Daylight and Night ambiance toggle with smooth CSS variable transitions',
@@ -204,6 +204,7 @@ export const portfolioData = {
 				'Responsive layout designed for mobile, tablet, and desktop viewports',
 			],
 		},
+
 		{
 			id: 'assessly',
 			title: 'Assessly - Online Assessment Platform',
@@ -260,6 +261,171 @@ export const portfolioData = {
 				'Chat interface with streaming answers and document citations',
 				'Modular structure supporting multi-document management',
 				'User authentication and document isolation',
+			],
+		},
+
+		{
+			id: 'securerbac',
+			title:
+				'SecureRBAC - Full-Stack Authentication & Role-Based Access Control',
+			category: 'fullstack',
+			description:
+				'A full-stack authentication and authorization system implementing Role-Based Access Control (RBAC) to manage user access, protect application resources, and enforce role-specific permissions.',
+			image: 'https://via.placeholder.com/800x600?text=SecureRBAC',
+			technologies: [
+				'React.js',
+				'Node.js',
+				'Express.js',
+				'MongoDB',
+				'JWT',
+				'JavaScript',
+			],
+			githubUrl: 'https://github.com/papu9679/SecureRBAC',
+			liveUrl: 'https://secure-rbac.vercel.app',
+			featured: true,
+			highlights: [
+				'Implemented secure user authentication and authorization',
+				'Designed role-based access control for managing user permissions',
+				'Protected backend routes using authentication middleware',
+				'Implemented role-specific access restrictions',
+				'Integrated MongoDB for persistent user and role management',
+			],
+		},
+
+		{
+			id: 'collaborative-kanban',
+			title:
+				'Real-Time Collaborative Kanban Board - Team Task Management Platform',
+			category: 'fullstack',
+			description:
+				'A full-stack collaborative project management platform that enables multiple users to manage tasks, organize workflows, and collaborate across shared Kanban boards with real-time synchronization.',
+			image: 'https://via.placeholder.com/800x600?text=Collaborative+Kanban',
+			technologies: [
+				'React.js',
+				'JavaScript',
+				'Node.js',
+				'Express.js',
+				'MongoDB',
+				'Socket.IO',
+				'JWT',
+				'Tailwind CSS',
+			],
+			githubUrl:
+				'https://github.com/papu9679/Real-Time-Collaborative-Kanban-Board',
+			liveUrl: 'https://real-time-collaborative-kanban-boar-zeta.vercel.app',
+			featured: true,
+			highlights: [
+				'Implemented real-time collaboration to synchronize board updates across multiple users',
+				'Developed Kanban boards with task creation, editing, deletion, and drag-and-drop functionality',
+				'Integrated Socket.IO for real-time event communication',
+				'Implemented secure authentication and role-based access control',
+				'Designed REST APIs for managing boards, tasks, and user operations',
+			],
+		},
+
+		{
+			id: 'geminibot',
+			title: 'Gemini Clone - AI-Powered Conversational Chatbot',
+			category: 'fullstack',
+			description:
+				'An AI-powered conversational chatbot built using Google Gemini API, enabling users to interact with an intelligent assistant through natural language conversations and receive context-aware responses.',
+			image: 'https://via.placeholder.com/800x600?text=Gemini+Bot',
+			technologies: [
+				'React.js',
+				'JavaScript',
+				'Node.js',
+				'Express.js',
+				'Google Gemini API',
+				'REST API',
+				'Tailwind CSS',
+			],
+			githubUrl: 'https://github.com/papu9679/GeminiBot',
+			liveUrl: 'https://frontend-nine-pink-80.vercel.app',
+			featured: true,
+			highlights: [
+				'Integrated Google Gemini API for AI-powered conversational responses',
+				'Developed an interactive chatbot interface for real-time conversations',
+				'Implemented backend API endpoints to handle communication with Gemini',
+				'Managed conversation state to support continuous interactions',
+				'Designed a responsive user interface for an improved chat experience',
+			],
+		},
+
+		{
+			id: 'taskflow',
+			title: 'TaskFlow - Modern Task Management Application',
+			category: 'fullstack',
+			description:
+				'A modern task management application designed to help users organize daily activities, manage tasks, track progress, and improve productivity through an intuitive and responsive user interface.',
+			image: 'https://via.placeholder.com/800x600?text=TaskFlow',
+			technologies: [
+				'React.js',
+				'JavaScript',
+				'Tailwind CSS',
+				'Node.js',
+				'Express.js',
+				'MongoDB',
+				'Mongoose',
+			],
+			githubUrl: 'https://github.com/papu9679/TaskFlow-with-Modern-UI',
+			liveUrl: 'https://task-flow-with-modern-ui.vercel.app',
+			featured: true,
+			highlights: [
+				'Developed a modern and responsive task management interface',
+				'Implemented task creation, editing, deletion, and status management',
+				'Designed an intuitive dashboard for organizing and tracking tasks',
+				'Integrated frontend components with backend REST APIs',
+				'Focused on clean UI design and an improved user experience',
+			],
+		},
+
+		{
+			id: 'staymate',
+			title: 'StayMate - Hostel & PG Management System',
+			category: 'fullstack',
+			description:
+				'A centralized hostel and PG management platform designed to simplify daily operations by bringing food management, rent tracking, expense monitoring, notices, tasks, and complaint management into a single dashboard.',
+			image: 'https://via.placeholder.com/800x600?text=StayMate',
+			technologies: [
+				'React.js',
+				'JavaScript',
+				'Vite',
+				'React Router',
+				'Tailwind CSS',
+				'Context API',
+				'Lucide React',
+			],
+			githubUrl: 'https://github.com/papu9679/staymate',
+			liveUrl: 'https://staymate-five.vercel.app/',
+			featured: true,
+			highlights: [
+				'Developed a centralized dashboard for managing hostel and PG activities',
+				'Implemented food menu and daily meal management',
+				'Built rent tracking with payment details and payment history',
+				'Integrated expense tracking and monthly expense monitoring',
+				'Developed notice board and task management features',
+				'Implemented complaint management and user profile settings',
+				'Created a responsive interface with reusable React components',
+			],
+		},
+
+		{
+			id: 'random-js-topics',
+			title: 'Random Topics of JavaScript - JavaScript Learning Repository',
+			category: 'frontend',
+			description:
+				'A JavaScript learning repository containing practical examples, code snippets, and demonstrations of important JavaScript concepts to strengthen programming fundamentals and understand core language features.',
+			image: 'https://via.placeholder.com/800x600?text=JavaScript+Topics',
+			technologies: ['JavaScript', 'HTML5', 'CSS3', 'ES6+'],
+			githubUrl: 'https://github.com/papu9679/Random-Topics-of-JS',
+			liveUrl: 'https://random-topics-of-js.vercel.app/',
+			featured: false,
+			highlights: [
+				'Explored and implemented fundamental JavaScript concepts',
+				'Practiced modern JavaScript features and ES6+ syntax',
+				'Created practical code examples to understand language behavior',
+				'Worked with functions, arrays, objects, and asynchronous JavaScript',
+				'Organized learning examples for quick reference and revision',
 			],
 		},
 
