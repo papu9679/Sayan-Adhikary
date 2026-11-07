@@ -110,6 +110,7 @@ A personal developer portfolio built with React, Tailwind CSS, Node.js, Express,
 - Environment variables:
   ```env
   PORT=5000
+  CLIENT_URL=https://your-frontend.vercel.app
   MONGODB_URI=your_mongodb_atlas_connection_string
   ADMIN_PASSWORD=your_secure_password
   ```

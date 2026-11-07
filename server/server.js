@@ -17,13 +17,21 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/portfolio';
 
-// Middlewares
+// Single frontend link allowed by CORS
+const clientUrl = (process.env.CLIENT_URL || 'http://localhost:5173').replace(/\/+$/, '');
+
 app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'x-admin-key'],
+  origin: clientUrl,
+  credentials: true,
 }));
 app.use(express.json());
+
+// Security headers
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  next();
+});
 
 // Request logger
 app.use((req, res, next) => {
