@@ -95,7 +95,7 @@ export default function Projects() {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/25 to-transparent" />
                 
                 {/* Tech overlay chip */}
                 <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">

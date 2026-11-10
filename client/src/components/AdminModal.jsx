@@ -214,7 +214,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
             </div>
             <h4 className="text-2xl font-black mb-2 text-slate-900 dark:text-white">Admin Authentication</h4>
             <p className="text-sm font-medium text-slate-600 dark:text-slate-300 mb-6">
-              Enter master administrator password to moderate visitor feedback submissions.
+              Protected 💀!
             </p>
 
             {loginError && (
@@ -231,7 +231,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter admin password (default: admin123)"
+                  placeholder="Enter the password"
                   className={`w-full px-4 py-3.5 rounded-2xl text-sm font-bold border outline-none focus:ring-2 focus:ring-blue-500 text-center ${
                     isDaylight 
                       ? 'bg-slate-50 border-slate-300 text-slate-900' 
@@ -250,7 +250,7 @@ export default function AdminModal({ isOpen, onClose, onFeedbackUpdated }) {
             </form>
 
             <p className="mt-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
-              💡 Tip: Default password in `.env` is <code className="font-mono font-bold text-blue-600 dark:text-blue-400">admin123</code>.
+              💡 Tip: Default password will not work <code className="font-mono font-bold text-blue-600 dark:text-blue-400">Dont-Try</code>.
             </p>
           </div>
         ) : (
