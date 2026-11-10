@@ -479,9 +479,9 @@ export const portfolioData = {
 			},
 			{
 				role: 'Web Development Intern',
-				company: 'ABC',
+				company: 'AccioJob',
 				period: '2025 - 2026',
-				location: 'Remote',
+				location: 'Chennai',
 				achievements: [
 					'Created reusable Tailwind CSS UI components across project modules.',
 					'Maintained REST APIs and wrote database queries for frontend features.',
