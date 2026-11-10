@@ -228,7 +228,7 @@ export default function FeedbackWall({ onOpenAdmin }) {
 								{/* Name */}
 								<div>
 									<label className="block text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:text-slate-200 mb-1.5">
-										Your Name{' '}
+										Your Name <span className="text-rose-500">*</span>
 										<span className="text-slate-400 font-normal lowercase">
 											{/* (optional) */}
 										</span>
