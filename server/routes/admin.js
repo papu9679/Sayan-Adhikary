@@ -7,7 +7,7 @@ const router = express.Router();
 // POST /api/admin/login - Authenticate admin credentials
 router.post('/login', (req, res) => {
   const { password } = req.body;
-  const expectedPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  const expectedPassword = process.env.ADMIN_PASSWORD;
 
   if (!password || password !== expectedPassword) {
     return res.status(401).json({

@@ -1,0 +1,45 @@
+[
+  {
+    "_id": "seed-fb-1",
+    "name": "Sarah Chen",
+    "message": "Loved exploring your projects! The attention to detail in responsive UI design and micro-interactions is outstanding.",
+    "email": "sarah.c@techinnovations.io",
+    "rating": 5,
+    "status": "published",
+    "publicConsent": true,
+    "createdAt": "2026-11-08T14:55:39.798Z",
+    "approvedAt": "2026-11-09T14:55:39.799Z"
+  },
+  {
+    "_id": "seed-fb-2",
+    "name": "David Rodriguez",
+    "message": "Super clean portfolio architecture! The braided color theme and daylight switch look slick across my phone and monitor.",
+    "email": "d.rodriguez@codecraft.org",
+    "rating": 5,
+    "status": "published",
+    "publicConsent": true,
+    "createdAt": "2026-11-04T14:55:39.799Z",
+    "approvedAt": "2026-11-05T14:55:39.799Z"
+  },
+  {
+    "_id": "seed-fb-3",
+    "name": "Aisha Patel",
+    "message": "Impressive full-stack projects. Great code structure and clear problem-solving approaches in your case studies.",
+    "email": "aisha.dev@buildfuture.com",
+    "rating": 5,
+    "status": "published",
+    "publicConsent": true,
+    "createdAt": "2026-11-01T14:55:39.799Z",
+    "approvedAt": "2026-11-02T14:55:39.799Z"
+  },
+  {
+    "_id": "seed-fb-4",
+    "name": "Michael Vance",
+    "message": "Would love to see unit test coverage badges on the project cards, but overall this is one of the best engineer portfolios I have seen.",
+    "email": "michael@cloudscale.net",
+    "rating": 4,
+    "status": "pending",
+    "publicConsent": true,
+    "createdAt": "2026-11-11T12:55:39.799Z"
+  }
+]

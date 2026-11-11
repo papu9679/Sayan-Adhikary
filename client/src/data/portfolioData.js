@@ -252,8 +252,8 @@ export const portfolioData = {
 				'Gemini API',
 				'PDF parsing',
 			],
-			githubUrl: 'https://github.com/papu9679/Retrieva-AI',
-			liveUrl: 'https://retrieva-ai.vercel.app',
+			githubUrl: 'https://github.com/papu9679/RAG-Application',
+			liveUrl: 'https://rag-application-delta.vercel.app/',
 			featured: true,
 			highlights: [
 				'Document ingestion pipeline: text extraction, chunking, and embedding generation',
@@ -354,7 +354,7 @@ export const portfolioData = {
 		{
 			id: 'taskflow',
 			title: 'TaskFlow - Modern Task Management Application',
-			category: 'fullstack',
+			category: 'frontend',
 			description:
 				'A modern task management application designed to help users organize daily activities, manage tasks, track progress, and improve productivity through an intuitive and responsive user interface.',
 			image: 'https://via.placeholder.com/800x600?text=TaskFlow',
@@ -382,7 +382,7 @@ export const portfolioData = {
 		{
 			id: 'staymate',
 			title: 'StayMate - Hostel & PG Management System',
-			category: 'fullstack',
+			category: 'frontend',
 			description:
 				'A centralized hostel and PG management platform designed to simplify daily operations by bringing food management, rent tracking, expense monitoring, notices, tasks, and complaint management into a single dashboard.',
 			image: 'https://via.placeholder.com/800x600?text=StayMate',
@@ -432,7 +432,7 @@ export const portfolioData = {
 		{
 			id: 'slackbridge',
 			title: 'SlackBridge - AI Assistant Integration for Slack',
-			category: 'fullstack',
+			category: 'backend',
 			description:
 				'Node.js server implementing the Model Context Protocol (MCP) so LLMs can interact with Slack workspaces to send messages and manage channels.',
 			image: 'https://via.placeholder.com/800x600?text=SlackBridge',

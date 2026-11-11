@@ -161,7 +161,7 @@ export default function Projects() {
                       <span>Source Code</span>
                     </a>
 
-                    <a
+                    { project.id == 'slackbridge' ? null : <a
                       href={project.liveUrl}
                       target={project.liveUrl.startsWith('http') ? '_blank' : '_self'}
                       rel="noopener noreferrer"
@@ -169,7 +169,7 @@ export default function Projects() {
                     >
                       <span>Live Preview</span>
                       <ArrowUpRight className="w-4 h-4" />
-                    </a>
+                    </a>}
                   </div>
 
                   <button
